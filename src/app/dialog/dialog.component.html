@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>Add Candidate Form</h1>
+<div mat-dialog-content>
+    <form [formGroup]="addcandidateForm">
+        <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input formControlName="fName" matInput placeholder="First Name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input formControlName="lName" matInput placeholder="Last Name">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Category</mat-label>
+            <mat-select formControlName="category" placeholder="Select a Category"> 
+                <mat-option value="Senior FSD">Senior FSD</mat-option>
+                <mat-option value="Junior FSD">Junior FSD</mat-option>
+                <mat-option value="DevOps Engineer">DevOps Engineer</mat-option>
+                <mat-option value="Cloud Engineer">Cloud Engineer</mat-option>
+                <mat-option value="Scrum Master">Scrum Master</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Exam Date</mat-label>
+            <input formControlName="examDate" matInput [matDatepicker]="picker">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+          <mat-label for=""><h1>Select Gender</h1></mat-label>
+          <mat-radio-group formControlName="gender" class="example-radio-group">
+            <mat-radio-button class="example-radio-button" *ngFor="let gend of genderList" [value]="gend">
+                {{gend}}
+            </mat-radio-button>
+          </mat-radio-group>
+          <mat-form-field appearance="outline">
+            <mat-label>Total Score</mat-label>
+            <input formControlName="score" matInput type="number" placeholder="Score">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Comment</mat-label>
+            <textarea formControlName="comment" matInput></textarea>
+        </mat-form-field>
+    
+   
+    <div mat-dialog-actions [align]="'end'">
+        <button mat-raised-button color="warn" mat-dialog-close="">Close</button>
+        <button class="ps-3" mat-raised-button color="primary" (click)="addCandidate()">{{actionBtn}}</button>
+    </div>
+    </form>
+
+</div>
+

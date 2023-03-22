@@ -1,0 +1,24 @@
+{
+  "candidateList": [
+    {
+      "fName": "Ayo",
+      "lName": "Uhuangho",
+      "category": "DevOps Engineer",
+      "gender": "Male",
+      "score": 98.5,
+      "examDate": "2023-03-16T23:00:00.000Z",
+      "comment": "Welcome",
+      "id": 1
+    }
+  ],
+  "userList": [
+    {
+      "userEmail": "a@a.com",
+      "userPassword": "password",
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
